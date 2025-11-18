@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>RTU SGPA & CGPA Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button id="theme-toggle" class="theme-btn" aria-label="Toggle dark/light theme">🌙</button>
+
+    <div class="container">
+        <div class="home">
+            <h1>RTU SGPA & CGPA Calculator</h1>
+            <p class="subtitle">Select your branch and proceed to calculate SGPA or CGPA.</p>
+
+            <div class="input-group">
+                <label for="branch-select">Select Branch</label>
+                <select id="branch-select" title="Select your branch">
+                    <option value="AI">AI & Data Science (AI)</option>
+                    <option value="CSE" selected>Computer Science & Engineering (CSE)</option>
+                    <option value="IT">Information Technology (IT)</option>
+                    <option value="ECE">Electronics & Communication (ECE)</option>
+                    <option value="EE">Electrical Engineering (EE)</option>
+                    <option value="ME">Mechanical Engineering (ME)</option>
+                </select>
+            </div>
+
+            <div class="hstack mt-16">
+                <button id="sgpa-btn" class="btn-primary">SGPA Calculator</button>
+                <button id="cgpa-btn" class="btn-secondary">CGPA Calculator</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

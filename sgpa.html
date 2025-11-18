@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SGPA Calculator - RTU</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button id="theme-toggle" class="theme-btn" aria-label="Toggle dark/light theme">🌙</button>
+    <button id="back-btn" class="back-btn" aria-label="Go back to home">← Back</button>
+
+    <div class="container">
+        <h1>SGPA Calculator</h1>
+        <p class="subtitle">Enter your subject grades</p>
+
+        <div id="setup-screen" class="screen">
+            <div class="branch-info-box">
+                <p><strong>Selected Department:</strong></p>
+                <p><span id="dept-display">Loading...</span></p>
+                <p><strong>Result Year:</strong></p>
+                <p><span id="year-display">Loading...</span></p>
+            </div>
+
+            <div class="input-group">
+                <label for="semester-select">Select Semester:</label>
+                <div class="input-wrapper">
+                    <select id="semester-select">
+                        <option value="sem-1">Semester 1 (Common First Year)</option>
+                        <option value="sem-2">Semester 2</option>
+                        <option value="sem-3">Semester 3</option>
+                        <option value="sem-4">Semester 4</option>
+                        <option value="sem-5">Semester 5</option>
+                        <option value="sem-6">Semester 6</option>
+                        <option value="sem-7">Semester 7</option>
+                        <option value="sem-8">Semester 8</option>
+                        <option value="custom">-- Custom / Manual --</option>
+                    </select>
+                    <button id="submit-subjects" class="btn-primary">Continue</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="grades-screen" class="screen hidden">
+            <div id="subjects-container"></div>
+            <div class="hstack">
+                <button id="add-subject" class="btn-secondary">+ Add Subject</button>
+                <button id="calculate-sgpa" class="btn-primary">Calculate SGPA</button>
+            </div>
+        </div>
+
+        <div id="result-screen" class="screen hidden">
+            <div class="result-card">
+                <div class="result-text">Your SGPA is: <span class="result-value" id="sgpa-result">0.00</span></div>
+                <button id="recalculate-sgpa" class="btn-secondary">Recalculate</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+    <script src="sgpa.js"></script>
+</body>
+</html>

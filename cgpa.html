@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGPA Calculator - RTU</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button id="theme-toggle" class="theme-btn" aria-label="Toggle dark/light theme">🌙</button>
+    <button id="back-btn" class="back-btn" aria-label="Go back to home">← Back</button>
+
+    <div class="container">
+        <h1>CGPA Calculator</h1>
+        <p class="subtitle">Enter your semester SGPAs</p>
+
+        <div id="setup-screen" class="screen">
+            <div class="input-group">
+                <label for="year-select">Select Course Duration (years):</label>
+                <div class="input-wrapper">
+                    <select id="year-select">
+                        <option value="1">1 year (2 semesters)</option>
+                        <option value="2">2 years (4 semesters)</option>
+                        <option value="3">3 years (6 semesters)</option>
+                        <option value="4" selected>4 years (8 semesters)</option>
+                    </select>
+                    <button id="submit-semesters" class="btn-primary">Continue</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="sgpas-screen" class="screen hidden">
+            <div id="semesters-container"></div>
+            <div class="vcenter">
+                <label for="total-cgpa-select">Total CGPA (use first N semesters):</label>
+                <select id="total-cgpa-select"></select>
+            </div>
+            <button id="calculate-cgpa" class="btn-primary mt-12">Calculate CGPA</button>
+        </div>
+
+        <div id="result-screen" class="screen hidden">
+            <div class="result-card">
+                <h2>Your CGPA</h2>
+                <div class="result-value" id="cgpa-result">0.00</div>
+                <button id="recalculate-cgpa" class="btn-secondary">Recalculate</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+    <script src="cgpa.js"></script>
+</body>
+</html>
